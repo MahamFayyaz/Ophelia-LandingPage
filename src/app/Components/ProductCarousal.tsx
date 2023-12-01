@@ -20,7 +20,7 @@ export default class ProductCarousal extends Component {
         render():ReactNode{
             var settings = {
                 dots: true,
-                infinite: false,
+                infinite: true,
                 speed: 500,
                 slidesToShow: 4,
                 slidesToScroll: 1,
@@ -61,8 +61,8 @@ export default class ProductCarousal extends Component {
 
     </div>
     
-    <div className=''>
-        <Slider {...settings}>
+    <div className=' w-[90%] flex justify-center items-center mx-auto '>
+        <Slider {...settings} className='gap-0 w-[100%]'>
     <div>
       <Image src={e1} alt='jewel' width={200} objectFit='cover'/>
       <Button/>
@@ -87,6 +87,8 @@ export default class ProductCarousal extends Component {
     <Image src={e6} alt='jewel' width={200}/>
     <Button/>
     </div>
-  </Slider></div></section>
+  </Slider>
+  </div>
+  </section>
   )}
 }
